@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  telegram-bot:
+    build: .
+    container_name: telegram_selling_bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - MONGO_URI=${MONGO_URI}
+      - BOT_TOKEN=${BOT_TOKEN}
+      - API_ID=${API_ID}
+      - API_HASH=${API_HASH}
+      - ADMIN_IDS=${ADMIN_IDS}
+    ports:
+      - "8000:8000"  # FastAPI port (if needed)
+    networks:
+      - bot_network
+    volumes:
+      - ./logs:/app/logs
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+networks:
+  bot_network:
+    driver: bridge
