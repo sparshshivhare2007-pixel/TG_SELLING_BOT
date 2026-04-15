@@ -7,7 +7,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("OxaPay")
 
 # YOUR MERCHANT API KEY
-API_KEY = "YOUR_API_KEY"
+API_KEY = "8A2JQO-N8P966-2LAGHG-RBK0AJ"
 # ENDPOINTS
 CREATE_URL = "https://api.oxapay.com/v1/payment/invoice"
 STATUS_URL = "https://api.oxapay.com/v1/payment/status"
