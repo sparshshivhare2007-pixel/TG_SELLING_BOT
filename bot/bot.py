@@ -36,7 +36,7 @@ from config import BOT_TOKEN, ADMIN_IDS
 # ================= MongoDB Setup =================
 MONGO_URI = os.getenv("MONGO_URI") or "mongodb+srv:=Vth0"
 client = MongoClient(MONGO_URI)
-db = client["QuickCodes"]
+db = client["SparshStore"]
 users_col = db["users"]
 orders_col = db["orders"]
 countries_col = db["countries"]
@@ -45,14 +45,14 @@ crypto_col = db["crypto_invoices"]
 withdrawals_col = db["withdrawals"]
 
 #--------- Config : don't use @
-BOTUSER = "quickcodes_bot"
-SUPPORT = "vthnet"
-USAGE = "shebroked"
-OWNER = "Valriks"
-UPDATES= "shebroked"
+BOTUSER = "TgIdStoreProbot"
+SUPPORT = "The_destiny_world"
+USAGE = "SellingLogs"
+OWNER = "oye_sparsh"
+UPDATES= "SparshSelling"
 CHANNEL="CHANNEL"
-SALESLOG = "shebroked"
-ADMINLOG = "-1003208353049"
+SALESLOG = "SellingLogs"
+ADMINLOG = "-1003790606640"
 # ================= Ban Middleware =================
 class BanCheckMiddleware(BaseMiddleware):
     async def __call__(
