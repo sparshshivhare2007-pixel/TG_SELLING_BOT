@@ -3,36 +3,40 @@
 #-------------------------------------------------------
 import os
 import asyncio
-from aiogram import BaseMiddleware
-from typing import Callable, Dict, Any, Awaitable
-from aiogram.types import TelegramObject
+import re
+import random
 import html
 from html import escape
-from bson import ObjectId
-from aiogram.types import CopyTextButton
-from telethon.tl.functions.account import GetAuthorizationsRequest, ResetAuthorizationRequest
-from aiogram.fsm.context import FSMContext
+from typing import Callable, Dict, Any, Awaitable
 from datetime import datetime, timezone, timedelta
-from aiogram import Bot, Dispatcher, F
+
+# Third party imports
+from bson import ObjectId
+from aiogram import Bot, Dispatcher, F, BaseMiddleware, types
 from aiogram.client.default import DefaultBotProperties
 from aiogram.filters import Command, StateFilter
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import StatesGroup, State
-from aiogram.types import Message, CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
+from aiogram.types import (
+    Message, CallbackQuery, InlineKeyboardButton, 
+    InlineKeyboardMarkup, TelegramObject, CopyTextButton,
+    InputMediaVideo
+)
 from aiogram.utils.keyboard import InlineKeyboardBuilder
+from aiogram.utils.deep_linking import create_start_link
 from pymongo import MongoClient
 from telethon import TelegramClient
 from telethon.sessions import StringSession
-from aiogram.utils.deep_linking import create_start_link
-from telethon.errors import SessionPasswordNeededError, PhoneCodeInvalidError, PasswordHashInvalidError
-import re
-from aiogram import types
-import random
-from aiogram.types import InputMediaVideo
-from recharge_flow import register_recharge_handlers
-from mustjoin import check_join
-from config import BOT_TOKEN, ADMIN_IDS
+from telethon.errors import (
+    SessionPasswordNeededError, PhoneCodeInvalidError, 
+    PasswordHashInvalidError
+)
+from telethon.tl.functions.account import GetAuthorizationsRequest, ResetAuthorizationRequest
 
+# Local imports (relative imports with dot)
+from .recharge_flow import register_recharge_handlers
+from .mustjoin import check_join
+from .config import BOT_TOKEN, ADMIN_IDS
 # ================= MongoDB Setup =================
 MONGO_URI = os.getenv("MONGO_URI") or "mongodb+srv:=Vth0"
 client = MongoClient(MONGO_URI)
