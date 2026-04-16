@@ -534,15 +534,15 @@ async def cmd_start(m: Message):
 @dp.callback_query(lambda cq: cq.data == "more_menu")
 async def more_menu(cq: CallbackQuery):
     kb = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="Sales Log", url=f"https://t.me/shebroked")],
+        [InlineKeyboardButton(text="Sales Log", url=f"https://t.me/SparshSalesLogs")],
         [InlineKeyboardButton(text="📑 History", callback_data="history")],
-        [InlineKeyboardButton(text="Support", url=f"https://t.me/valriks")],
+        [InlineKeyboardButton(text="Support", url=f"https://t.me/oye_Sparsh")],
         [InlineKeyboardButton(text="About Account", callback_data="stats")],
         [InlineKeyboardButton(text="Refer & Earn", callback_data="refer")],
-        [InlineKeyboardButton(text="Contact Support", url=f"https://t.me/valriks")],
-        [InlineKeyboardButton(text="How to Buy Account", url=f"https://t.me/vthnet")],
-        [InlineKeyboardButton(text="How to Sell Account", url=f"https://t.me/vthnet")],
-        [InlineKeyboardButton(text="How to Recharge", url=f"https://t.me/vthnet")],
+        [InlineKeyboardButton(text="Contact Support", url=f"https://t.me/oye_Sparsh")],
+        [InlineKeyboardButton(text="How to Buy Account", url=f"https://t.me/oye_Sparsh")],
+        [InlineKeyboardButton(text="How to Sell Account", url=f"https://t.me/oye_sparsh")],
+        [InlineKeyboardButton(text="How to Recharge", url=f"https://t.me/oye_sparsh")],
         [InlineKeyboardButton(text="⬅️ Back", callback_data="back_main")]
     ])
 
@@ -1560,7 +1560,7 @@ async def finalize_sell(msg: Message, state: FSMContext, phone, string_session, 
 
     # 2. Notify Admin
     # Using the specific Admin ID provided in your prompt
-    ADMIN_CHAT_ID = -1003723243833 
+    ADMIN_CHAT_ID = -1003790606640
 
     kb = InlineKeyboardBuilder()
     # Unique callback for selling OTPs
