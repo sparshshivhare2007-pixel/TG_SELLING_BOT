@@ -3,13 +3,13 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 from config import MUST_JOIN_CHANNEL
 
 # Private channel details
-PRIVATE_CHANNEL_ID =  -1003764116093
-PRIVATE_CHANNEL_LINK = "https://t.me/the_destiny_world"
+PRIVATE_CHANNEL_ID =  -1003881480168
+PRIVATE_CHANNEL_LINK = "https://t.me/SparshSelling"
 PRIVATE_CHANNEL_ID2 =  -1003764116093
 
 BOTUSER = "TgIdStoreProbot"
 # Welcome text with HTML formatting
-WELCOME_TEXT = ("❌ 𝖸𝗈𝗎 𝗆𝗎𝗌𝗍 𝗌𝗎𝖻𝗌𝖼𝗋𝗂𝖻𝖾 𝗍𝗈 𝗍𝗁𝖾 𝗈𝖿𝖿𝗂𝖼𝗂𝖺𝗅 𝖻𝗈𝗍 𝖼𝗁𝖺𝗇𝗇𝖾𝗅 𝗍𝗈 𝗎𝗌𝖾 𝗍𝗁𝖾 𝖻𝗈𝗍...\n\n<blockquote>- <b>𝖢𝗁𝖺𝗇𝗇𝖾𝗅</b> - @vthnet</blockquote>\n\n<b>• Press Verify Button below to check</b>")
+WELCOME_TEXT = ("❌ 𝖸𝗈𝗎 𝗆𝗎𝗌𝗍 𝗌𝗎𝖻𝗌𝖼𝗋𝗂𝖻𝖾 𝗍𝗈 𝗍𝗁𝖾 𝗈𝖿𝖿𝗂𝖼𝗂𝖺𝗅 𝖻𝗈𝗍 𝖼𝗁𝖺𝗇𝗇𝖾𝗅 𝗍𝗈 𝗎𝗌𝖾 𝗍𝗁𝖾 𝖻𝗈𝗍...\n\n<blockquote>- <b>𝖢𝗁𝖺𝗇𝗇𝖾𝗅</b> - @the_destiny_World</blockquote>\n\n<b>• Press Verify Button below to check</b>")
 
 
 
@@ -44,7 +44,7 @@ async def send_join_message(message: types.Message):
 
     # First row: both channels
     kb.row(
-        types.InlineKeyboardButton(text="📢 𝖴𝗉𝖽𝖺𝗍𝖾𝗌", url=f"https://t.me/the_destiny_world"),
+        types.InlineKeyboardButton(text="📢 𝖴𝗉𝖽𝖺𝗍𝖾𝗌", url=f"https://t.me/SparshSelling"),
         types.InlineKeyboardButton(text="💌 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 ", url=PRIVATE_CHANNEL_LINK)
     )
     kb.row(
