@@ -2037,7 +2037,7 @@ async def callback_howto(cq: CallbackQuery):
     kb = InlineKeyboardBuilder()
     kb.row(
         InlineKeyboardButton(text="▪️ Support", url=f"https://t.me/{OWNER}"),
-        InlineKeyboardButton(text="▪️ 𝙃𝙤𝙬 𝙩𝙤 𝙪𝙨𝙚", url=f"https://t.me/vthnet")
+        InlineKeyboardButton(text="▪️ 𝙃𝙤𝙬 𝙩𝙤 𝙪𝙨𝙚", url=f"https://t.me/oye_sparsh")
     )
     kb.row(
         InlineKeyboardButton(text="▪️ Previous", callback_data="back_main")
@@ -2053,7 +2053,7 @@ async def callback_howto(cq: CallbackQuery):
     kb = InlineKeyboardBuilder()
     kb.row(
         InlineKeyboardButton(text="📲 Support", url=f"https://t.me/{SUPPORT}"),
-        InlineKeyboardButton(text="🔗 𝙃𝙤𝙬 𝙩𝙤 𝙪𝙨𝙚", url=f"https://t.me/vthnet")
+        InlineKeyboardButton(text="🔗 𝙃𝙤𝙬 𝙩𝙤 𝙪𝙨𝙚", url=f"https://t.me/oye_sparsh")
     )
     # Added back button
     kb.row(InlineKeyboardButton(text="🔙 Main Menu", callback_data="main_menu")) 
